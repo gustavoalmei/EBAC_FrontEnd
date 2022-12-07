@@ -80,6 +80,12 @@ $(document).ready(function(){
           required:true,
           minlength: 10
         },
+        userCPF:{
+          required:true
+        },
+        userCEP:{
+          required:true,
+        }
       },
       messages:{
         userName:{
@@ -96,6 +102,8 @@ $(document).ready(function(){
   $('#tel-form').mask('(00) 0 0000-0000',{placeholder: '(00) 0 0000-0000'})
   $('#state-form').mask('AA', {placeholder: "RS"})
   $('#date-form').mask("00/00/0000", {placeholder: "__/__/____"});
+  $('#cpf-form').mask("000.000.000-00", {placeholder: "000.000.000-00"});
+  $('#cep-form').mask("00000-000", {placeholder: "00000-000"});
 
   //Add new user
   $('#bttn-submit').click(function(e){
@@ -116,7 +124,9 @@ $(document).ready(function(){
         <td class="tbody-city">${$('#city-form').val()}</td>
         <td class="tbody-state">${$('#state-form').val()}</td>
         <td class="tbody-date">${$('#date-form').val()}</td>
-        <td class="tbody-phone">${$('#tel-form').val() }</td>
+        <td class="tbody-phone">${$('#tel-form').val()}</td>
+        <td class="tbody-cep">${$('#cep-form').val()}</td>
+        <td class="tbody-cpf">${$('#cpf-form').val()}</td>
         <td class="tbody-id">${id}</td>
       </tr>
       `
@@ -127,6 +137,8 @@ $(document).ready(function(){
       $('#state-form').val("")
       $('#date-form').val("")
       $('#tel-form').val("")
+      $('#cpf-form').val("")
+      $('#cep-form').val("")
 
       $('tbody').append(newTr)
     }
