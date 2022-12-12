@@ -1,0 +1,12 @@
+html,
+body{
+    height: 100vh;
+}
+
+main{
+    height: 100%;
+}
+
+button{
+    margin-top: 20px;
+}

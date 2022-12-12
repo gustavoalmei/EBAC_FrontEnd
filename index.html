@@ -1,252 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List User</title>
-    <link
-      rel="shortcut icon"
-      href="./images/favIcon-users.svg"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/header.css" />
-    <link rel="stylesheet" href="./style/aside.css" />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/footer.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo-image">
-          <img src="./images/logo-img.svg" alt="Logo Ipsum" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <main class="bg-dark container-fluid">
+        <div class="container-fluid h-100 d-flex align-items-center justify-content-center col-md-8">
+            <form action="" class="form text-white col-8 col-md-6 col-lg-4">
+                <label class="form-label" for="nome">Seu nome:</label>
+                <input class="form-control" type="text" id="nome" placeholder="Ex: João da Silva" required>
+                <label class="form-label" for="email">Seu e-mail:</label>
+                <input class="form-control" type="email" id="email" placeholder="Ex: meu@email.com" required>
+                <label class="form-label" for="telefone">Telefone:</label>
+                <input class="form-control" type="text" id="telefone" required>
+                <button class="btn btn-success col-12" type="submit">Enviar</button>
+            </form>
         </div>
-        <div class="container-config">
-          <div class="accounts-container">
-            <div class="account">
-              <div class="info">
-                <img src="./images/user-img.svg" />
-                <p>admin@email.com</p>
-              </div>
-            </div>
-            <div class="account">
-              <div class="info">
-                <img src="./images/plus-img.svg" />
-                <p>Add new account</p>
-              </div>
-            </div>
-          </div>
-          <div class="config">
-            <img
-              class="config-bttn"
-              id="bttn-settings"
-              src="./images/config-img.svg"
-              alt="Configuration"
-            />
-            <div class="list-settings">
-              <ul class="settings">
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Reference</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <aside>
-      <div class="container">
-        <nav>
-          <ul class="container-nav">
-            <li class="item-nav">
-              <div class="content-item">
-                <img class="icon-nav" src="./images/group-img.svg" />
-                <h3>Group</h3>
-              </div>
-              <nav id="new-groups">
-                <ul class="container-nav">
-                  <li class="item-nav">
-                    <div class="content-item">
-                      <img class="icon-nav nav-custom" src="./images/add-img.svg" />
-                      <p>New group</p>
-                    </div>
-                  </li>
-                </ul>
-              </nav>
-            </li>
-            <li class="item-nav">
-              <div class="content-item">
-                <img class="icon-nav" src="./images/category-img.svg" />
-                <h3>Category</h3>
-              </div>
-              <nav id="new-category">
-                <ul class="container-nav">
-                  <li class="item-nav">
-                    <div class="content-item">
-                      <img class="icon-nav nav-custom" src="./images/add-img.svg" />
-                      <p>New Category</p>
-                    </div>
-                  </li>
-                </ul>
-              </nav>
-            </li>
-            <li class="item-nav">
-              <div class="content-item">
-                <img class="icon-nav" src="./images/favorite-img.svg" />
-                <h3>Favorite</h3>
-              </div>
-            </li>
-            <li class="item-nav">
-              <div class="content-item">
-                <img class="icon-nav" src="./images/trash-img.svg" />
-                <h3>Trash</h3>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer-aside">
-          <div class="container-aside" id="arrow-aside">
-            <img
-              class="bttn-arrow"
-              src="./images/arrow-img.svg"
-              alt="Arrow button"
-            />
-          </div>
-        </div>
-      </div>
-    </aside>
-    <main>
-      <div class="container">
-        <header>
-          <div class="tools-header">
-            <div class="tools-user">
-              <input
-                type="search"
-                name="searchUser"
-                id="searchUser"
-                placeholder="Name, E-mail, Phone..."
-              />
-              <img src="./images/search-img.svg" class="search-icon" />
-            </div>
-            <div>
-              <button class="bttn" id="add-user">
-                <img class="add-user" src="./images/add-img-black.svg" />
-              </button>
-              <button class="bttn" id="remove-user">
-                <img class="remove-user" src="./images/remove-img.svg" />
-              </button>
-            </div>
-          </div>
-          <form action="">
-            <div class="container-form">
-              <div class="container-flex">
-                <label for="name-form">
-                  <p>Name</p>
-                  <input type="text" id="name-form" name="userName" placeholder="Your name">
-                </label>
-                <label for="email-form">
-                  <p>E-mail</p>
-                  <input type="email" id="email-form" name="userEmail" placeholder="Your e-mail">
-                </label>
-              </div>
-              <div class="container-flex">
-                <label for="address-form">
-                  <p>Endereco</p>
-                  <input type="text" id="address-form" name="userAddress" placeholder="Your Address">
-                </label>
-              </div>
-              <div class="container-flex">
-              <label for="tel-form">
-                <p>Telefone</p>
-                  <input type="tel" id="tel-form" name="userTel">
-              </label>
-              <label for="city-form">
-                <p>Cidade</p>
-                <input type="text" id="city-form" name="userCity" placeholder="Your City">
-              </label>
-            </div>
-            <div class="container-flex">
-              <label for="state-form">
-                <p>Estado</p>
-                <input type="text" id="state-form" name="userState">
-              </label>
-              <label for="date-form">
-                <p>Data de Nascimento</p>
-                <input type="tel" id="date-form" name="userDate">
-              </label>
-            </div>
-            <div class="container-flex">
-              <label for="state-form">
-                <p>CPF</p>
-                <input type="text" id="cpf-form" name="userCPF">
-              </label>
-              <label for="date-form">
-                <p>CEP</p>
-                <input type="tel" id="cep-form" name="userCEP">
-              </label>
-            </div>
-            <container class="submit">
-              <button class="bttn-form" id="bttn-submit" type="submit">Submit</button>
-              <button class="bttn-form" id="bttn-reset" type="Reset">Reset</button>
-            </container>
-          </form>
-          </div>
-        </header>
-        <div class="content-table">
-          <table style="table-layout: fixed" cellspacing="0">
-            <colgroup>
-              <col style="width: 30px" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 80px" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 20%" />
-              <col style="width: 80px" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th>
-                  <label for="select-User">
-                    <input type="checkbox" name="selectUser" id="select-User" />
-                  </label>
-                </th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Endereco</th>
-                <th>Cidade</th>
-                <th>Estado</th>
-                <th>Data Nasc</th>
-                <th>Telefone</th>
-                <th>CEP</th>
-                <th>CPF</th>
-                <th>ID</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </main>
-    <footer>
-      <p>Todos os direitos reservados &copy; 2022 </p>
-    </footer>
-    <script src="./script/jquery-3.6.1.min.js"></script>
-    <script src="./script/jquery-validation-1.19.5/jquery.validate.min.js"></script>
-    <script src="./script/jquery-validation-1.19.5/messages_pt_BR.min.js"></script>
-    <script src="./script/jQuery-Mask-Plugin-master/jquery.mask.min.js"></script>
-    <script src="./script/main.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/jquery-3.6.1.min.js"></script>
+    <script src="./src/jquery.mask.min.js"></script>
+    <script src="./main.js"></script>
+</body>
 </html>
