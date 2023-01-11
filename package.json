@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass main.css main.scss",
+    "sass": "sass main.scss main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
